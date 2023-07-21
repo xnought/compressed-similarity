@@ -30,3 +30,11 @@ outputs sorted by most similar to my sentence (rapping is my passion, what can I
 (0.6376811594202898, 'I love rap battles'),
 (0.6811594202898551, 'Wrap this up!')]
 ```
+
+or go to [`example.ipynb`](example.ipynb) for a real example on 10,000 pieces of text.
+
+## Speed
+
+From tests (in [`performance.ipynb`](performance.ipynb)), could conclude with no confidence that probably for small enough strings takes 50 microseconds per `ncd` call.
+
+Should do more tests before making any decisions though.
