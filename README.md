@@ -46,6 +46,7 @@ If you'd like to switch, all you need to do is pass in a `compressor` in `ncd`.
 For example if you wanted to use [bz2](https://docs.python.org/3/library/bz2.html)
 
 ```python
+from compression_distance import normalized_compression_distance as ncd
 import bz2
 
 similarity = ncd("dogs".encode(), "cats".encode(), compressor=bz2.compress)
