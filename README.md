@@ -36,3 +36,19 @@ or go to [`example.ipynb`](example.ipynb) for a real example on 10,000 pieces of
 From tests (in [`performance.ipynb`](performance.ipynb)), could conclude with no confidence that probably for small enough strings takes 50 microseconds per `ncd` call.
 
 Should do more tests before making any decisions though.
+
+## Different Compression
+
+I use [gzip](https://docs.python.org/3/library/gzip.html) by default from the default python library.
+
+If you'd like to switch, all you need to do is pass in a `compressor` in `ncd`.
+
+For example if you wanted to use [bz2](https://docs.python.org/3/library/bz2.html)
+
+```python
+import bz2
+
+similarity = ncd("dogs".encode(), "cats".encode(), compressor=bz2.compress)
+```
+
+You just need to provide a function (`compressor`) that takes bytes and returns bytes.
