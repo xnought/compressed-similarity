@@ -18,8 +18,6 @@ similarities = [ncd(my_string.encode(), other.encode()) for other in strings]
 
 print(my_string)
 print(list(sorted(zip(similarities, strings), key=lambda x: x[0])))
-
-
 ```
 
 outputs sorted by most similar to my sentence (rapping is my passion, what can I say, I'm a poet) first
